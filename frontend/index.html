@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mango Leaf Disease Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mango Leaf Disease Detection</h1>
+            <p>Upload an image of a mango leaf to detect potential diseases using our AI model.</p>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <h2>Upload Leaf Image</h2>
+                <div class="upload-area">
+                    <input type="file" id="leafImageInput" accept="image/*" hidden>
+                    <label for="leafImageInput" class="upload-btn">Choose Image</label>
+                    <p id="fileName" class="file-name-display">No file chosen</p>
+                </div>
+                <div id="imagePreview" class="image-preview hidden">
+                    <img id="previewImg" src="#" alt="Image Preview">
+                </div>
+                <button id="analyzeButton" class="analyze-btn" disabled>Analyze Leaf</button>
+            </section>
+
+            <section id="resultsSection" class="results-section hidden">
+                <h2>Analysis Result</h2>
+                <div id="loading" class="loading-indicator hidden">
+                    <div class="spinner"></div>
+                    <span>Analyzing... Please wait.</span>
+                </div>
+                <div id="errorDisplay" class="error-message hidden"></div>
+                <div id="resultsContent" class="results-content hidden">
+    <div class="result-item">
+        <strong>Detected State:</strong> <span id="diseaseName"></span>
+    </div>
+    <div class="result-item">
+        <strong>Confidence:</strong> <span id="confidence"></span>%
+    </div>
+    <div class="recommendations">
+        <h3>Recommendations</h3>
+        <p id="recommendationsText"></p>
+    </div>
+</div>
+
+                <button id="chatPopupBtn" class="chat-popup-btn">Chat with AI</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Contribute by uploading diverse leaf images.</p>
+            <p>© 2025 Solvit</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
