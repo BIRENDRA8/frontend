@@ -2,3 +2,4 @@ fastapi
 uvicorn
 tensorflow
 python-multipart
+PIL
